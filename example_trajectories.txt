@@ -1,0 +1,61 @@
+========================================================================
+ Example multi-point trajectories for the delta robot
+ action: /trajectory_plan   (delta_robot_serial/action/PosTraj)
+========================================================================
+
+The trajectory_plan action accepts n via points as parallel x/y/z arrays and
+tracks a cubic-spline curve through them, in order. The robot's current
+position is prepended automatically as the start of the path.
+
+All coordinates are in millimetres. These 5 trajectories were validated on the
+PseudoArduino sim: each reaches SUCCEEDED with via_index advancing 0 -> n-1.
+They stay in a conservative reachable envelope (x,y within +/-30 mm,
+z from -108 to -122 mm). Home at motor-angle 0 is approx (0, 0, -72.7 mm).
+
+Prerequisites:
+  ros2 launch delta_robot_description PseudoArduinoTraj.launch   # in one shell
+  source install/setup.bash                                     # in the shell you send from
+
+Append --feedback to any command to watch via_index climb through the points.
+The action server pauses ~0.5 s each time it crosses an intermediate via point.
+
+------------------------------------------------------------------------
+1. Square (4 points)        reached approx (-28.4,  0.9, -110.9)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [30,30,-30,-30], y: [0,30,30,0], z: [-110,-112,-112,-110]}" --feedback
+
+------------------------------------------------------------------------
+2. Triangle (3 points)      reached approx (-27.6, -20.1, -112.6)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [0,28,-28], y: [30,-20,-20], z: [-112,-112,-112]}" --feedback
+
+------------------------------------------------------------------------
+3. Zigzag (4 points)        reached approx ( 29.3,  0.0, -110.1)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [-30,-10,10,30], y: [0,25,-25,0], z: [-110,-114,-114,-110]}" --feedback
+
+------------------------------------------------------------------------
+4. Arc / dip (3 points)     reached approx (-29.7,  0.0, -108.5)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [30,0,-30], y: [0,0,0], z: [-108,-122,-108]}" --feedback
+
+------------------------------------------------------------------------
+5. Diagonal descent (3 points)  reached approx (-26.0, -24.6, -120.6)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [0,20,-25], y: [0,20,-25], z: [-120, -110, -90]}" --feedback
+
+========================================================================
+Notes
+------------------------------------------------------------------------
+- x, y, z must be equal-length, non-empty arrays; mismatched/empty goals
+  are rejected by the action server.
+- A single-point goal (e.g. x:[30] y:[0] z:[-110]) still works and behaves
+  like the old point-to-point move (spline of 2 knots = straight line).
+- Out-of-workspace points make IK return NaN and abort the goal, so keep
+  points inside the envelope above.
+========================================================================

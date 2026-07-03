@@ -1,0 +1,312 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-4c596f5fb11b7eb89bed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				},
+				{
+					"build" : "delta_robot_serial__py",
+					"jsonFile" : "directory-delta_robot_serial__py-caef02f94021d259dc12.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/flug/Documents/colcon_ws/build/delta_robot_serial/delta_robot_serial__py",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "delta_robot_serial__rs",
+					"jsonFile" : "directory-delta_robot_serial__rs-4eff455311dc5d7f232b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/flug/Documents/colcon_ws/build/delta_robot_serial/delta_robot_serial__rs",
+					"targetIndexes" : 
+					[
+						15
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "delta_robot_serial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_delta_robot_serial_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_delta_robot_serial_egg-d610c2a102e0d5c8d43e.json",
+					"name" : "ament_cmake_python_build_delta_robot_serial_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_delta_robot_serial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_delta_robot_serial-421e83d41db12aceee8f.json",
+					"name" : "ament_cmake_python_copy_delta_robot_serial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_joint_pub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_joint_pub-97faa9c0c151aceb995b.json",
+					"name" : "delta_joint_pub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial-2572a27f466c976004b1.json",
+					"name" : "delta_robot_serial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__cpp-200156db4ee3472296d7.json",
+					"name" : "delta_robot_serial__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "delta_robot_serial__py::@cec4fbbf77d138596a76",
+					"jsonFile" : "target-delta_robot_serial__py-e3e424f41e7651df91a5.json",
+					"name" : "delta_robot_serial__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_generator_c-1be9c76f4df2da052bcf.json",
+					"name" : "delta_robot_serial__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_generator_py-14768d3a33994d2187f3.json",
+					"name" : "delta_robot_serial__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_generator_type_description-b9bc425942f2a82f5b04.json",
+					"name" : "delta_robot_serial__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_c-8cd109395eb8125df899.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_cpp-5591b6479d3b8c32c06e.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_fastrtps_c-5ef469aad3b3df644169.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_fastrtps_cpp-185743a4859f2a604a41.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_introspection_c-a343427ebd4c3620acca.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial__rosidl_typesupport_introspection_cpp-ebc5df6e9f426e2360f1.json",
+					"name" : "delta_robot_serial__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "delta_robot_serial__rs::@4f195b040a1c4c61b83b",
+					"jsonFile" : "target-delta_robot_serial__rs-85eca9b5aaf160c9180b.json",
+					"name" : "delta_robot_serial__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial_s__rosidl_typesupport_c-c7b900c0713faf0621c3.json",
+					"name" : "delta_robot_serial_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial_s__rosidl_typesupport_fastrtps_c-075bc12b70edfd30b690.json",
+					"name" : "delta_robot_serial_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial_s__rosidl_typesupport_introspection_c-4ebe258baa76f68568a8.json",
+					"name" : "delta_robot_serial_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "delta_robot_serial_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-delta_robot_serial_uninstall-05f2a1db0fab679bb170.json",
+					"name" : "delta_robot_serial_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ikin_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ikin_server-be34d2b2096919342928.json",
+					"name" : "ikin_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pseudo_arduino::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pseudo_arduino-7f5793aa4139bcd82161.json",
+					"name" : "pseudo_arduino",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trajPlan_actionServer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trajPlan_actionServer-5c030770df493c8674ac.json",
+					"name" : "trajPlan_actionServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trajPlan_action_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trajPlan_action_server-f14225379e2779c7332d.json",
+					"name" : "trajPlan_action_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-28b13f32d1e0b7523e95.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/flug/Documents/colcon_ws/build/delta_robot_serial",
+		"source" : "/home/flug/Documents/colcon_ws/src/delta_robot_serial"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,299 @@
+[0.000000] (-) TimerEvent: {}
+[0.000068] (-) JobUnselected: {'identifier': 'delta_robot_description'}
+[0.000153] (-) JobUnselected: {'identifier': 'serial'}
+[0.000167] (delta_robot_serial) JobQueued: {'identifier': 'delta_robot_serial', 'dependencies': OrderedDict({'serial': '/home/flug/Documents/colcon_ws/install/serial'})}
+[0.000313] (delta_robot_serial) JobStarted: {'identifier': 'delta_robot_serial'}
+[0.006838] (delta_robot_serial) JobProgress: {'identifier': 'delta_robot_serial', 'progress': 'cmake'}
+[0.007618] (delta_robot_serial) JobProgress: {'identifier': 'delta_robot_serial', 'progress': 'build'}
+[0.008070] (delta_robot_serial) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/flug/Documents/colcon_ws/build/delta_robot_serial', '--', '-j16', '-l16'], 'cwd': '/home/flug/Documents/colcon_ws/build/delta_robot_serial', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/flug', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'AI_AGENT': 'claude-code_2-1-195_agent', 'USER': 'flug', 'SNAP_COMMON': '/var/snap/code/common', 'CLAUDE_CODE_ENTRYPOINT': 'claude-vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/snap/code/247/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'FONTCONFIG_PATH': '/etc/fonts', 'STARSHIP_SHELL': 'bash', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/flug/snap/code/common/.cache/gio-modules', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'x11', 'CLAUDE_AGENT_SDK_VERSION': '0.3.195', 'SNAP_UID': '1000', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/flug/Documents/colcon_ws/install/serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/flug', 'CHROME_DESKTOP': 'code.desktop', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'OLDPWD': '/home/flug/Documents/colcon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'SNAP_USER_DATA': '/home/flug/snap/code/247', 'GTK_PATH': '/snap/code/247/usr/lib/x86_64-linux-gnu/gtk-3.0', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-799bd0e9-1.12-main.sock', 'GTK_IM_MODULE_FILE': '/home/flug/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'MANAGERPID': '2305', 'SYSTEMD_EXEC_PID': '2748', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SNAP_REVISION': '247', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5918', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'flug', 'SNAP_CONTEXT': '9Fd9dYFwCJobwz96Bx4YWlqgffd4sKM6rKLJ19YdhZqd4_7J9unr', 'JOURNAL_STREAM': '9:27756', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'SNAP_VERSION': '1b50d58d', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'flug', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'FC_FONTATIONS': '1', 'WINDOWPATH': '2', 'MCP_CONNECTION_NONBLOCKING': 'true', 'PATH': '/home/flug/.local/bin:/home/flug/.local/bin:/opt/ros/jazzy/bin:/home/flug/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/flug-Nitro-AN515-57:@/tmp/.ICE-unix/2704,unix/flug-Nitro-AN515-57:/tmp/.ICE-unix/2704', 'GTK_EXE_PREFIX': '/snap/code/247/usr', 'INVOCATION_ID': '6cf8fc94141a41448067df2ee7f3d8ad', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'SNAP_DATA': '/var/snap/code/247', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/247/usr/lib/locale', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XDG_DATA_HOME': '/home/flug/snap/code/247/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'SNAP_USER_COMMON': '/home/flug/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/flug/snap/code/247/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'AMENT_PREFIX_PATH': '/home/flug/Documents/colcon_ws/install/serial:/opt/ros/jazzy', 'SNAP_COOKIE': '9Fd9dYFwCJobwz96Bx4YWlqgffd4sKM6rKLJ19YdhZqd4_7J9unr', 'SHELL': '/bin/bash', 'GDK_PIXBUF_MODULEDIR': '/snap/code/247/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING': 'true', 'CLAUDE_CODE_SESSION_ID': 'ed1c0ff6-42d4-4f2a-aced-d6ab2f3eb1b8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SNAP_NAME': 'code', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'GDK_PIXBUF_MODULE_FILE': '/home/flug/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/flug/Documents/colcon_ws/build/delta_robot_serial', 'VSCODE_CLI': '1', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'SNAP_REAL_HOME': '/home/flug', 'VSCODE_CODE_CACHE_PATH': '/home/flug/.config/Code/CachedData/1b50d58d73426c9171299ec4037d01365d995b78', 'XDG_DATA_DIRS': '/home/flug/snap/code/247/.local/share:/home/flug/snap/code/247:/snap/code/247/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'CLAUDE_CODE_EXECPATH': '/home/flug/.vscode/extensions/anthropic.claude-code-2.1.195-linux-x64/resources/native-binary/claude', 'SNAP_EUID': '1000', 'STARSHIP_SESSION_KEY': '2557126530549614', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'SNAP': '/snap/code/247', 'CLAUDE_CODE_ENABLE_TASKS': '0', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'CMAKE_PREFIX_PATH': '/home/flug/Documents/colcon_ws/install/serial:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'VSCODE_PID': '5962'}), 'shell': False}
+[0.043552] (delta_robot_serial) StdoutLine: {'line': b'[  3%] Built target delta_robot_serial__rosidl_generator_type_description\n'}
+[0.043719] (delta_robot_serial) StdoutLine: {'line': b'[  3%] Built target delta_robot_serial__rs\n'}
+[0.048356] (delta_robot_serial) StdoutLine: {'line': b'[  7%] Built target trajPlan_action_server\n'}
+[0.048552] (delta_robot_serial) StdoutLine: {'line': b'[  9%] Building CXX object CMakeFiles/pseudo_arduino.dir/src/pseudo_arduino.cpp.o\n'}
+[0.049016] (delta_robot_serial) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_delta_robot_serial\n'}
+[0.050906] (delta_robot_serial) StdoutLine: {'line': b'[ 12%] Built target delta_joint_pub\n'}
+[0.057307] (delta_robot_serial) StdoutLine: {'line': b'[ 14%] Built target delta_robot_serial__cpp\n'}
+[0.058065] (delta_robot_serial) StdoutLine: {'line': b'[ 29%] Built target delta_robot_serial__rosidl_generator_c\n'}
+[0.073716] (delta_robot_serial) StdoutLine: {'line': b'[ 36%] Built target delta_robot_serial__rosidl_typesupport_introspection_c\n'}
+[0.074668] (delta_robot_serial) StdoutLine: {'line': b'[ 49%] Built target delta_robot_serial__rosidl_typesupport_cpp\n'}
+[0.074899] (delta_robot_serial) StdoutLine: {'line': b'[ 50%] Built target delta_robot_serial__rosidl_typesupport_introspection_cpp\n'}
+[0.074989] (delta_robot_serial) StdoutLine: {'line': b'[ 58%] Built target delta_robot_serial__rosidl_typesupport_c\n'}
+[0.075157] (delta_robot_serial) StdoutLine: {'line': b'[ 65%] Built target delta_robot_serial__rosidl_typesupport_fastrtps_c\n'}
+[0.075907] (delta_robot_serial) StdoutLine: {'line': b'[ 72%] Built target delta_robot_serial__rosidl_typesupport_fastrtps_cpp\n'}
+[0.089322] (delta_robot_serial) StdoutLine: {'line': b'[ 72%] Built target delta_robot_serial\n'}
+[0.093438] (delta_robot_serial) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/ikin_server.dir/src/ikin_server.cpp.o\n'}
+[0.093610] (delta_robot_serial) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/trajPlan_actionServer.dir/src/trajPlan_actionServer.cpp.o\n'}
+[0.099882] (-) TimerEvent: {}
+[0.105177] (delta_robot_serial) StdoutLine: {'line': b'[ 78%] Built target delta_robot_serial__py\n'}
+[0.123176] (delta_robot_serial) StdoutLine: {'line': b'[ 83%] Built target delta_robot_serial__rosidl_generator_py\n'}
+[0.138175] (delta_robot_serial) StdoutLine: {'line': b'[ 90%] Built target delta_robot_serial_s__rosidl_typesupport_c\n'}
+[0.138364] (delta_robot_serial) StdoutLine: {'line': b'[ 90%] Built target delta_robot_serial_s__rosidl_typesupport_introspection_c\n'}
+[0.139111] (delta_robot_serial) StdoutLine: {'line': b'[ 94%] Built target delta_robot_serial_s__rosidl_typesupport_fastrtps_c\n'}
+[0.199977] (-) TimerEvent: {}
+[0.218348] (delta_robot_serial) StdoutLine: {'line': b'running egg_info\n'}
+[0.233176] (delta_robot_serial) StdoutLine: {'line': b'writing delta_robot_serial.egg-info/PKG-INFO\n'}
+[0.233455] (delta_robot_serial) StdoutLine: {'line': b'writing dependency_links to delta_robot_serial.egg-info/dependency_links.txt\n'}
+[0.233548] (delta_robot_serial) StdoutLine: {'line': b'writing top-level names to delta_robot_serial.egg-info/top_level.txt\n'}
+[0.276095] (delta_robot_serial) StdoutLine: {'line': b"reading manifest file 'delta_robot_serial.egg-info/SOURCES.txt'\n"}
+[0.276506] (delta_robot_serial) StdoutLine: {'line': b"writing manifest file 'delta_robot_serial.egg-info/SOURCES.txt'\n"}
+[0.297104] (delta_robot_serial) StdoutLine: {'line': b'[ 94%] Built target ament_cmake_python_build_delta_robot_serial_egg\n'}
+[0.300053] (-) TimerEvent: {}
+[0.400178] (-) TimerEvent: {}
+[0.500361] (-) TimerEvent: {}
+[0.600533] (-) TimerEvent: {}
+[0.700696] (-) TimerEvent: {}
+[0.800874] (-) TimerEvent: {}
+[0.901057] (-) TimerEvent: {}
+[1.001303] (-) TimerEvent: {}
+[1.101498] (-) TimerEvent: {}
+[1.201754] (-) TimerEvent: {}
+[1.301990] (-) TimerEvent: {}
+[1.402186] (-) TimerEvent: {}
+[1.502477] (-) TimerEvent: {}
+[1.602696] (-) TimerEvent: {}
+[1.702860] (-) TimerEvent: {}
+[1.803040] (-) TimerEvent: {}
+[1.903258] (-) TimerEvent: {}
+[2.003456] (-) TimerEvent: {}
+[2.103651] (-) TimerEvent: {}
+[2.163533] (delta_robot_serial) StdoutLine: {'line': b'[ 96%] Linking CXX executable pseudo_arduino\n'}
+[2.203750] (-) TimerEvent: {}
+[2.247132] (delta_robot_serial) StdoutLine: {'line': b'[ 96%] Built target pseudo_arduino\n'}
+[2.303862] (-) TimerEvent: {}
+[2.404059] (-) TimerEvent: {}
+[2.504248] (-) TimerEvent: {}
+[2.604434] (-) TimerEvent: {}
+[2.704613] (-) TimerEvent: {}
+[2.804814] (-) TimerEvent: {}
+[2.905003] (-) TimerEvent: {}
+[3.005205] (-) TimerEvent: {}
+[3.105396] (-) TimerEvent: {}
+[3.205578] (-) TimerEvent: {}
+[3.305762] (-) TimerEvent: {}
+[3.405940] (-) TimerEvent: {}
+[3.506118] (-) TimerEvent: {}
+[3.606296] (-) TimerEvent: {}
+[3.706478] (-) TimerEvent: {}
+[3.714723] (delta_robot_serial) StdoutLine: {'line': b'[ 98%] Linking CXX executable ikin_server\n'}
+[3.806640] (-) TimerEvent: {}
+[3.843118] (delta_robot_serial) StdoutLine: {'line': b'[ 98%] Built target ikin_server\n'}
+[3.906735] (-) TimerEvent: {}
+[4.006897] (-) TimerEvent: {}
+[4.107102] (-) TimerEvent: {}
+[4.207348] (-) TimerEvent: {}
+[4.307568] (-) TimerEvent: {}
+[4.407796] (-) TimerEvent: {}
+[4.508026] (-) TimerEvent: {}
+[4.608236] (-) TimerEvent: {}
+[4.708389] (-) TimerEvent: {}
+[4.808554] (-) TimerEvent: {}
+[4.908809] (-) TimerEvent: {}
+[5.009015] (-) TimerEvent: {}
+[5.109228] (-) TimerEvent: {}
+[5.209441] (-) TimerEvent: {}
+[5.309609] (-) TimerEvent: {}
+[5.409865] (-) TimerEvent: {}
+[5.510068] (-) TimerEvent: {}
+[5.610220] (-) TimerEvent: {}
+[5.710447] (-) TimerEvent: {}
+[5.810598] (-) TimerEvent: {}
+[5.910754] (-) TimerEvent: {}
+[6.011010] (-) TimerEvent: {}
+[6.111258] (-) TimerEvent: {}
+[6.159158] (delta_robot_serial) StdoutLine: {'line': b'[100%] Linking CXX shared library libtrajPlan_actionServer.so\n'}
+[6.211364] (-) TimerEvent: {}
+[6.311562] (-) TimerEvent: {}
+[6.372173] (delta_robot_serial) StdoutLine: {'line': b'[100%] Built target trajPlan_actionServer\n'}
+[6.379826] (delta_robot_serial) CommandEnded: {'returncode': 0}
+[6.380318] (delta_robot_serial) JobProgress: {'identifier': 'delta_robot_serial', 'progress': 'install'}
+[6.385671] (delta_robot_serial) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/flug/Documents/colcon_ws/build/delta_robot_serial'], 'cwd': '/home/flug/Documents/colcon_ws/build/delta_robot_serial', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/flug', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'AI_AGENT': 'claude-code_2-1-195_agent', 'USER': 'flug', 'SNAP_COMMON': '/var/snap/code/common', 'CLAUDE_CODE_ENTRYPOINT': 'claude-vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/snap/code/247/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'FONTCONFIG_PATH': '/etc/fonts', 'STARSHIP_SHELL': 'bash', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/flug/snap/code/common/.cache/gio-modules', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'x11', 'CLAUDE_AGENT_SDK_VERSION': '0.3.195', 'SNAP_UID': '1000', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/flug/Documents/colcon_ws/install/serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/flug', 'CHROME_DESKTOP': 'code.desktop', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'OLDPWD': '/home/flug/Documents/colcon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'SNAP_USER_DATA': '/home/flug/snap/code/247', 'GTK_PATH': '/snap/code/247/usr/lib/x86_64-linux-gnu/gtk-3.0', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-799bd0e9-1.12-main.sock', 'GTK_IM_MODULE_FILE': '/home/flug/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'MANAGERPID': '2305', 'SYSTEMD_EXEC_PID': '2748', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SNAP_REVISION': '247', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5918', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'flug', 'SNAP_CONTEXT': '9Fd9dYFwCJobwz96Bx4YWlqgffd4sKM6rKLJ19YdhZqd4_7J9unr', 'JOURNAL_STREAM': '9:27756', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'SNAP_VERSION': '1b50d58d', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'flug', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'FC_FONTATIONS': '1', 'WINDOWPATH': '2', 'MCP_CONNECTION_NONBLOCKING': 'true', 'PATH': '/home/flug/.local/bin:/home/flug/.local/bin:/opt/ros/jazzy/bin:/home/flug/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/flug-Nitro-AN515-57:@/tmp/.ICE-unix/2704,unix/flug-Nitro-AN515-57:/tmp/.ICE-unix/2704', 'GTK_EXE_PREFIX': '/snap/code/247/usr', 'INVOCATION_ID': '6cf8fc94141a41448067df2ee7f3d8ad', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'SNAP_DATA': '/var/snap/code/247', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/247/usr/lib/locale', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XDG_DATA_HOME': '/home/flug/snap/code/247/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'SNAP_USER_COMMON': '/home/flug/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/flug/snap/code/247/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'AMENT_PREFIX_PATH': '/home/flug/Documents/colcon_ws/install/serial:/opt/ros/jazzy', 'SNAP_COOKIE': '9Fd9dYFwCJobwz96Bx4YWlqgffd4sKM6rKLJ19YdhZqd4_7J9unr', 'SHELL': '/bin/bash', 'GDK_PIXBUF_MODULEDIR': '/snap/code/247/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING': 'true', 'CLAUDE_CODE_SESSION_ID': 'ed1c0ff6-42d4-4f2a-aced-d6ab2f3eb1b8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SNAP_NAME': 'code', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'GDK_PIXBUF_MODULE_FILE': '/home/flug/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/flug/Documents/colcon_ws/build/delta_robot_serial', 'VSCODE_CLI': '1', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'SNAP_REAL_HOME': '/home/flug', 'VSCODE_CODE_CACHE_PATH': '/home/flug/.config/Code/CachedData/1b50d58d73426c9171299ec4037d01365d995b78', 'XDG_DATA_DIRS': '/home/flug/snap/code/247/.local/share:/home/flug/snap/code/247:/snap/code/247/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'CLAUDE_CODE_EXECPATH': '/home/flug/.vscode/extensions/anthropic.claude-code-2.1.195-linux-x64/resources/native-binary/claude', 'SNAP_EUID': '1000', 'STARSHIP_SESSION_KEY': '2557126530549614', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'SNAP': '/snap/code/247', 'CLAUDE_CODE_ENABLE_TASKS': '0', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'CMAKE_PREFIX_PATH': '/home/flug/Documents/colcon_ws/install/serial:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'VSCODE_PID': '5962'}), 'shell': False}
+[6.390772] (delta_robot_serial) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.390939] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rosidl_interfaces/delta_robot_serial\n'}
+[6.391026] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.json\n'}
+[6.391075] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.json\n'}
+[6.391120] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.391182] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.391235] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.391282] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.h\n'}
+[6.391413] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__struct.h\n'}
+[6.391463] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__functions.c\n'}
+[6.391510] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.c\n'}
+[6.391555] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__functions.h\n'}
+[6.391601] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__description.c\n'}
+[6.391654] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/pos_traj.h\n'}
+[6.391710] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.391765] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.391971] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.h\n'}
+[6.392014] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__struct.h\n'}
+[6.392057] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.c\n'}
+[6.392122] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__functions.c\n'}
+[6.392315] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__description.c\n'}
+[6.392363] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__functions.h\n'}
+[6.392411] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/ikin.h\n'}
+[6.392455] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg\n'}
+[6.392500] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.392663] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/library_path.sh\n'}
+[6.392723] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/library_path.dsv\n'}
+[6.392824] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_generator_c.so\n'}
+[6.392869] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.392939] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.392984] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.393028] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_fastrtps_c.h\n'}
+[6.393072] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.393116] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.393159] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_fastrtps_c.h\n'}
+[6.393202] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg\n'}
+[6.393245] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.393288] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_fastrtps_c.so\n'}
+[6.393332] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.393414] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.393462] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/pos_traj.hpp\n'}
+[6.393507] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.393672] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__builder.hpp\n'}
+[6.393728] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__traits.hpp\n'}
+[6.393790] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.hpp\n'}
+[6.393867] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__struct.hpp\n'}
+[6.393915] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.393989] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/ikin.hpp\n'}
+[6.394060] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.394107] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__builder.hpp\n'}
+[6.394153] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.hpp\n'}
+[6.394198] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__struct.hpp\n'}
+[6.394273] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__traits.hpp\n'}
+[6.394317] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg\n'}
+[6.394360] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.394404] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.394478] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.394521] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.394563] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/dds_fastrtps\n'}
+[6.394635] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.394684] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.394727] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.394813] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/dds_fastrtps\n'}
+[6.394856] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.394900] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg\n'}
+[6.394945] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.394990] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.395035] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.395089] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.395133] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.395176] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_introspection_c.h\n'}
+[6.395220] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.c\n'}
+[6.395264] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.395307] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.395404] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_introspection_c.h\n'}
+[6.395446] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.c\n'}
+[6.395487] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg\n'}
+[6.395530] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.395571] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_introspection_c.so\n'}
+[6.395613] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_c.so\n'}
+[6.395660] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial\n'}
+[6.395703] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action\n'}
+[6.395744] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail\n'}
+[6.395790] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.395834] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.cpp\n'}
+[6.395877] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv\n'}
+[6.395919] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail\n'}
+[6.395962] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.396007] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.cpp\n'}
+[6.396050] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_introspection_cpp.so\n'}
+[6.396093] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_cpp.so\n'}
+[6.396136] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/pythonpath.sh\n'}
+[6.396178] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/pythonpath.dsv\n'}
+[6.396220] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info\n'}
+[6.396263] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[6.396306] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[6.396349] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[6.396392] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[6.396436] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial\n'}
+[6.396478] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action\n'}
+[6.396521] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/_pos_traj.py\n'}
+[6.396564] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/_pos_traj_s.c\n'}
+[6.396606] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/__init__.py\n'}
+[6.396669] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv\n'}
+[6.396715] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/_ikin.py\n'}
+[6.396758] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/__init__.py\n'}
+[6.396801] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/_ikin_s.c\n'}
+[6.396843] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_introspection_c.so\n'}
+[6.396889] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_c.so\n'}
+[6.396931] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/__init__.py\n'}
+[6.396975] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.397018] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.397061] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.397104] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_c.c\n'}
+[6.411628] (-) TimerEvent: {}
+[6.419883] (delta_robot_serial) StdoutLine: {'line': b"Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial'...\n"}
+[6.419969] (delta_robot_serial) StdoutLine: {'line': b"Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action'...\n"}
+[6.420013] (delta_robot_serial) StdoutLine: {'line': b"Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv'...\n"}
+[6.423432] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.423599] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_introspection_c.so\n'}
+[6.423804] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_c.so\n'}
+[6.423976] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_generator_py.so\n'}
+[6.424109] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rust_packages/delta_robot_serial\n'}
+[6.424207] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust\n'}
+[6.424254] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/Cargo.toml\n'}
+[6.424299] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/build.rs\n'}
+[6.424343] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src\n'}
+[6.424389] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action\n'}
+[6.424488] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action/rmw.rs\n'}
+[6.424534] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv\n'}
+[6.424583] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv/rmw.rs\n'}
+[6.424657] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/lib.rs\n'}
+[6.424706] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv.rs\n'}
+[6.424761] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action.rs\n'}
+[6.424807] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.idl\n'}
+[6.424851] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.idl\n'}
+[6.424894] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.srv\n'}
+[6.424935] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.action\n'}
+[6.424977] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/pseudo_arduino\n'}
+[6.425053] (delta_robot_serial) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/pseudo_arduino" to ""\n'}
+[6.425196] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/delta_joint_pub\n'}
+[6.425378] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/ikin_server\n'}
+[6.426477] (delta_robot_serial) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/ikin_server" to ""\n'}
+[6.426560] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/trajPlan_action_server\n'}
+[6.426727] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libtrajPlan_actionServer.so\n'}
+[6.431630] (delta_robot_serial) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libtrajPlan_actionServer.so" to ""\n'}
+[6.431738] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/package_run_dependencies/delta_robot_serial\n'}
+[6.431788] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/parent_prefix_path/delta_robot_serial\n'}
+[6.431883] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.sh\n'}
+[6.431929] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.dsv\n'}
+[6.431973] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.sh\n'}
+[6.432041] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.dsv\n'}
+[6.432112] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.bash\n'}
+[6.432156] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.sh\n'}
+[6.432199] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.zsh\n'}
+[6.432242] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.dsv\n'}
+[6.432286] (delta_robot_serial) StdoutLine: {'line': b'-- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.dsv\n'}
+[6.432329] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/packages/delta_robot_serial\n'}
+[6.432426] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rclcpp_components/delta_robot_serial\n'}
+[6.432471] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cExport.cmake\n'}
+[6.432516] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.432560] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.432604] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.432650] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cppExport.cmake\n'}
+[6.432702] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.432810] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.432858] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.432902] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.432972] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cExport.cmake\n'}
+[6.433018] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.433063] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.433134] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.433179] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cppExport.cmake\n'}
+[6.433223] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.433266] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_pyExport.cmake\n'}
+[6.433310] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.433353] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake-extras.cmake\n'}
+[6.433398] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.433458] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.433504] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.433554] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.433599] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.433699] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.433752] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[6.433793] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig.cmake\n'}
+[6.433839] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig-version.cmake\n'}
+[6.433882] (delta_robot_serial) StdoutLine: {'line': b'-- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.xml\n'}
+[6.434526] (delta_robot_serial) CommandEnded: {'returncode': 0}
+[6.449128] (delta_robot_serial) JobEnded: {'identifier': 'delta_robot_serial', 'rc': 0}
+[6.449448] (-) EventReactorShutdown: {}

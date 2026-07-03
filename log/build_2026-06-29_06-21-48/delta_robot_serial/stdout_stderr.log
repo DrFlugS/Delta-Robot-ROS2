@@ -1,0 +1,25 @@
+[ 50%] Built target pseudo_arduino
+[ 75%] [32mBuilding CXX object CMakeFiles/delta_joint_pub.dir/src/delta_joint_pub.cpp.o[0m
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:126:34:[m[K [01;31m[Kerror: [m[Ktemporary of non-literal type ‘[01m[KDeltaJointPub[m[K’ in a constant expression
+  126 |     auto mode = std::make_shared<[01;31m[KDeltaJointPub()[m[K;
+      |                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:81:7:[m[K [01;36m[Knote: [m[K‘[01m[KDeltaJointPub[m[K’ is not literal because:
+   81 | class [01;36m[KDeltaJointPub[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:81:7:[m[K [01;36m[Knote: [m[K  ‘[01m[KDeltaJointPub[m[K’ has a non-trivial destructor
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:126:22:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  126 |     auto mode = std::[01;31m[Kmake_shared<DeltaJointPub()[m[K;
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:126:22:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<DeltaJointPub()>[m[K’
+  126 |     auto mode = [01;31m[Kstd::make_shared<DeltaJointPub()[m[K;
+      |                 [01;31m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:126:22:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[Kauto[m[K’
+  126 |     auto mode = std::[01;36m[Kmake_shared<DeltaJointPub()[m[K;
+      |                      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:130:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+  130 |     rclcpp::spin([01;31m[Knode[m[K)
+      |                  [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/delta_joint_pub.dir/build.make:76: CMakeFiles/delta_joint_pub.dir/src/delta_joint_pub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/delta_joint_pub.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

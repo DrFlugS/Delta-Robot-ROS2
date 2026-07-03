@@ -1,0 +1,219 @@
+[0.006s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/flug/Documents/colcon_ws/install/serial/lib:/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_serial -- -j16 -l16
+[0.038s] [  1%] Built target delta_robot_serial__rs
+[0.039s] [  3%] Built target delta_robot_serial__rosidl_generator_type_description
+[0.042s] [  7%] Built target pseudo_arduino
+[0.042s] [ 10%] Built target trajPlan_action_server
+[0.044s] [ 10%] Built target ament_cmake_python_copy_delta_robot_serial
+[0.044s] [ 14%] Built target delta_joint_pub
+[0.052s] [ 16%] Built target delta_robot_serial__cpp
+[0.053s] [ 30%] Built target delta_robot_serial__rosidl_generator_c
+[0.068s] [ 45%] Built target delta_robot_serial__rosidl_typesupport_c
+[0.068s] [ 45%] Built target delta_robot_serial__rosidl_typesupport_fastrtps_cpp
+[0.068s] [ 52%] Built target delta_robot_serial__rosidl_typesupport_fastrtps_c
+[0.068s] [ 60%] Built target delta_robot_serial__rosidl_typesupport_introspection_c
+[0.068s] [ 67%] Built target delta_robot_serial__rosidl_typesupport_cpp
+[0.069s] [ 74%] Built target delta_robot_serial__rosidl_typesupport_introspection_cpp
+[0.082s] [ 74%] Built target delta_robot_serial
+[0.085s] [ 76%] [32mBuilding CXX object CMakeFiles/ikin_server.dir/src/ikin_server.cpp.o[0m
+[0.085s] [ 80%] Built target trajPlan_actionServer
+[0.094s] [ 81%] Built target delta_robot_serial__py
+[0.108s] [ 87%] Built target delta_robot_serial__rosidl_generator_py
+[0.122s] [ 98%] Built target delta_robot_serial_s__rosidl_typesupport_introspection_c
+[0.122s] [ 98%] Built target delta_robot_serial_s__rosidl_typesupport_c
+[0.122s] [ 98%] Built target delta_robot_serial_s__rosidl_typesupport_fastrtps_c
+[0.202s] running egg_info
+[0.215s] writing delta_robot_serial.egg-info/PKG-INFO
+[0.215s] writing dependency_links to delta_robot_serial.egg-info/dependency_links.txt
+[0.217s] writing top-level names to delta_robot_serial.egg-info/top_level.txt
+[0.255s] reading manifest file 'delta_robot_serial.egg-info/SOURCES.txt'
+[0.255s] writing manifest file 'delta_robot_serial.egg-info/SOURCES.txt'
+[0.273s] [ 98%] Built target ament_cmake_python_build_delta_robot_serial_egg
+[3.430s] [100%] [32m[1mLinking CXX executable ikin_server[0m
+[3.552s] [100%] Built target ikin_server
+[3.559s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial' returned '0': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/flug/Documents/colcon_ws/install/serial/lib:/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_serial -- -j16 -l16
+[3.560s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/flug/Documents/colcon_ws/install/serial/lib:/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/flug/Documents/colcon_ws/build/delta_robot_serial
+[3.565s] -- Install configuration: ""
+[3.565s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rosidl_interfaces/delta_robot_serial
+[3.565s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.json
+[3.565s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.json
+[3.565s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.565s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__struct.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__functions.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__functions.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__description.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/pos_traj.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__struct.h
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__functions.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__description.c
+[3.566s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__functions.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/ikin.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_generator_c__visibility_control.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/library_path.sh
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/library_path.dsv
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_generator_c.so
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_fastrtps_c.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_fastrtps_c.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_fastrtps_c.so
+[3.567s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/pos_traj.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__builder.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__traits.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__struct.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/ikin.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__builder.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__struct.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__traits.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.568s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/dds_fastrtps
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_fastrtps_cpp.hpp
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/dds_fastrtps
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_fastrtps_cpp.hpp
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_fastrtps_cpp.so
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_introspection_c.h
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.c
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_introspection_c.h
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.c
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.569s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_introspection_c.so
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_c.so
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__rosidl_typesupport_introspection_cpp.hpp
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/action/detail/pos_traj__type_support.cpp
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__rosidl_typesupport_introspection_cpp.hpp
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/include/delta_robot_serial/delta_robot_serial/srv/detail/ikin__type_support.cpp
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_introspection_cpp.so
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_typesupport_cpp.so
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/pythonpath.sh
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/pythonpath.dsv
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info
+[3.570s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/top_level.txt
+[3.570s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/SOURCES.txt
+[3.570s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/dependency_links.txt
+[3.570s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial-0.0.0-py3.12.egg-info/PKG-INFO
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action
+[3.570s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/_pos_traj.py
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/_pos_traj_s.c
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action/__init__.py
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/_ikin.py
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/__init__.py
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv/_ikin_s.c
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_introspection_c.so
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_c.so
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/__init__.py
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_fastrtps_c.so
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_introspection_c.c
+[3.571s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/_delta_robot_serial_s.ep.rosidl_typesupport_c.c
+[3.592s] Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial'...
+[3.592s] Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/action'...
+[3.592s] Listing '/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/srv'...
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_fastrtps_c.so
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_introspection_c.so
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/python3.12/site-packages/delta_robot_serial/delta_robot_serial_s__rosidl_typesupport_c.so
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libdelta_robot_serial__rosidl_generator_py.so
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rust_packages/delta_robot_serial
+[3.596s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/Cargo.toml
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/build.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action/rmw.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv/rmw.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/lib.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/srv.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/rust/src/action.rs
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.idl
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.idl
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/srv/Ikin.srv
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/action/PosTraj.action
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/pseudo_arduino
+[3.597s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/delta_joint_pub
+[3.598s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/ikin_server
+[3.598s] -- Set non-toolchain portion of runtime path of "/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/ikin_server" to ""
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/trajPlan_action_server
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/libtrajPlan_actionServer.so
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/package_run_dependencies/delta_robot_serial
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/parent_prefix_path/delta_robot_serial
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.sh
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.dsv
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.sh
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.dsv
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.bash
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.sh
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.zsh
+[3.599s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.dsv
+[3.599s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.dsv
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/packages/delta_robot_serial
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/rclcpp_components/delta_robot_serial
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_cppExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cppExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cppExport.cmake
+[3.600s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serial__rosidl_typesupport_cppExport-noconfig.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_pyExport.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/export_delta_robot_serial__rosidl_generator_pyExport-noconfig.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_libraries-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/ament_cmake_export_targets-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig.cmake
+[3.601s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig-version.cmake
+[3.602s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.xml
+[3.602s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial' returned '0': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/flug/Documents/colcon_ws/install/serial/lib:/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/flug/Documents/colcon_ws/build/delta_robot_serial

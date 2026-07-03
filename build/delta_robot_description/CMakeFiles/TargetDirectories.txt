@@ -1,0 +1,9 @@
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/uninstall.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/delta_robot_description_uninstall.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/test.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/edit_cache.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/rebuild_cache.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/list_install_components.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/install.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/install/local.dir
+/home/flug/Documents/colcon_ws/build/delta_robot_description/CMakeFiles/install/strip.dir

@@ -1,0 +1,8 @@
+[0.006s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_description -- -j16 -l16
+[0.018s] [31mCMake Error at CMakeLists.txt:28 (endforeach):
+[0.019s]   Flow control statements are not properly nested.
+[0.019s] 
+[0.019s] [0m
+[0.019s] -- Configuring incomplete, errors occurred!
+[0.019s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.021s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_description -- -j16 -l16

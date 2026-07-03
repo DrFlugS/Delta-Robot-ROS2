@@ -1,0 +1,12 @@
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/ikin_server.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K callback[m[K(const std::shared_ptr<delta_robot_serial::srv::Ikin_Request_<std::allocator<void> > >&, const std::shared_ptr<delta_robot_serial::srv::Ikin_Response_<std::allocator<void> > >&)[m[K’:
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/ikin_server.cpp:71:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::element_type = struct delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kphi_12[m[K’; did you mean ‘[01m[Kphi_11[m[K’?
+   71 |     res->[01;31m[Kphi_12[m[K = phi_2[0];
+      |          [01;31m[K^~~~~~[m[K
+      |          [32m[Kphi_11[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/ikin_server.cpp:72:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::element_type = struct delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct delta_robot_serial::srv::Ikin_Response_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kphi_13[m[K’; did you mean ‘[01m[Kphi_11[m[K’?
+   72 |     res->[01;31m[Kphi_13[m[K = phi_3[0];
+      |          [01;31m[K^~~~~~[m[K
+      |          [32m[Kphi_11[m[K
+gmake[2]: *** [CMakeFiles/ikin_server.dir/build.make:76: CMakeFiles/ikin_server.dir/src/ikin_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:700: CMakeFiles/ikin_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

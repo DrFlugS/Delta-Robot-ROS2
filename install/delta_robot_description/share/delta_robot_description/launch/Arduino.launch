@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Real-robot base stack (mirror of PseudoArduino.launch without the pseudo node) -->
+<launch>
+    <arg name="baudrate" default="115200"/>
+    <arg name="serial_port" default="/dev/ttyUSB0"/>
+
+    <!-- Joint state publisher from serial -->
+    <node pkg="delta_robot_serial" exec="delta_joint_pub" name="delta_joint_pub">
+        <param name="baudrate" value="$(var baudrate)"/>
+        <param name="serial_port" value="$(var serial_port)"/>
+    </node>
+
+    <!-- IK service -->
+    <node pkg="delta_robot_serial" exec="ikin_server" name="ikin_server">
+        <param name="baudrate" value="$(var baudrate)"/>
+        <param name="serial_port" value="$(var serial_port)"/>
+    </node>
+
+    <!-- Robot state publisher -->
+    <node pkg="robot_state_publisher" exec="robot_state_publisher" name="robot_state_publisher">
+        <param name="robot_description" value="$(command 'xacro $(find-pkg-share delta_robot_description)/urdf/delta_robot.urdf')"/>
+    </node>
+
+    <!-- RViz -->
+    <node pkg="rviz2" exec="rviz2" name="rviz2" args="-d $(find-pkg-share delta_robot_description)/config/Delta_robot.rviz"/>
+
+    <node pkg="rqt_gui" exec="rqt_gui" name="rqt_gui"/>
+</launch>

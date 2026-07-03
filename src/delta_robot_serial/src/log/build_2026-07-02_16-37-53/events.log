@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000071] (-) JobUnselected: {'identifier': 'delta_robot_description'}
+[0.000158] (-) JobUnselected: {'identifier': 'serial'}
+[0.000317] (delta_robot_serial) JobQueued: {'identifier': 'delta_robot_serial', 'dependencies': OrderedDict({'serial': '/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/install/serial'})}
+[0.000398] (delta_robot_serial) JobStarted: {'identifier': 'delta_robot_serial'}
+[0.007797] (delta_robot_serial) JobEnded: {'identifier': 'delta_robot_serial', 'rc': 1}
+[0.018080] (-) EventReactorShutdown: {}

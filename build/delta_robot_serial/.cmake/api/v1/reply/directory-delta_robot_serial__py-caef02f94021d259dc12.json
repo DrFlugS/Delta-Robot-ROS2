@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "delta_robot_serial__py",
+		"source" : "/home/flug/Documents/colcon_ws/build/delta_robot_serial/delta_robot_serial__py"
+	}
+}

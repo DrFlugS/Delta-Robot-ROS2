@@ -1,0 +1,29 @@
+[0.007s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/flug/Documents/colcon_ws/src/delta_robot_serial -DCMAKE_INSTALL_PREFIX=/home/flug/Documents/colcon_ws/install/delta_robot_serial
+[0.015s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.152s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.171s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.177s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.185s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.193s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.235s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.236s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.280s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.335s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.335s]   By not providing "Findserial.cmake" in CMAKE_MODULE_PATH this project has
+[0.335s]   asked CMake to find a package configuration file provided by "serial", but
+[0.335s]   CMake did not find one.
+[0.335s] 
+[0.335s]   Could not find a package configuration file provided by "serial" with any
+[0.335s]   of the following names:
+[0.335s] 
+[0.335s]     serialConfig.cmake
+[0.336s]     serial-config.cmake
+[0.336s] 
+[0.336s]   Add the installation prefix of "serial" to CMAKE_PREFIX_PATH or set
+[0.336s]   "serial_DIR" to a directory containing one of the above files.  If "serial"
+[0.336s]   provides a separate development package or SDK, be sure it has been
+[0.336s]   installed.
+[0.336s] 
+[0.336s] [0m
+[0.336s] -- Configuring incomplete, errors occurred!
+[0.340s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/flug/Documents/colcon_ws/src/delta_robot_serial -DCMAKE_INSTALL_PREFIX=/home/flug/Documents/colcon_ws/install/delta_robot_serial

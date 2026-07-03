@@ -1,0 +1,9 @@
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:184:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid TrajectoryPlanServer::[01;32m[KjointCB[m[K(const sensor_msgs::msg::JointState&)[m[K’ cannot be overloaded with ‘[01m[Kvoid TrajectoryPlanServer::[01;32m[KjointCB[m[K(const sensor_msgs::msg::JointState&)[m[K’
+  184 |         void [01;31m[KjointCB[m[K(const sensor_msgs::msg::JointState &msg ) {
+      |              [01;31m[K^~~~~~~[m[K
+[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:74:14:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid TrajectoryPlanServer::[01;32m[KjointCB[m[K(const sensor_msgs::msg::JointState&)[m[K’
+   74 |         void [01;36m[KjointCB[m[K(const sensor_msgs::msg::JointState &msg) {
+      |              [01;36m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/trajPlan_actionServer.dir/build.make:76: CMakeFiles/trajPlan_actionServer.dir/src/trajPlan_actionServer.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:732: CMakeFiles/trajPlan_actionServer.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

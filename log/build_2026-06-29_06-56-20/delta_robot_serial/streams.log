@@ -1,0 +1,27 @@
+[0.006s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_serial -- -j16 -l16
+[0.039s] [ 50%] Built target pseudo_arduino
+[0.050s] [ 75%] [32mBuilding CXX object CMakeFiles/delta_joint_pub.dir/src/delta_joint_pub.cpp.o[0m
+[4.562s] [100%] [32m[1mLinking CXX executable delta_joint_pub[0m
+[4.696s] [100%] Built target delta_joint_pub
+[4.703s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial' returned '0': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/flug/Documents/colcon_ws/build/delta_robot_serial -- -j16 -l16
+[4.704s] Invoking command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/flug/Documents/colcon_ws/build/delta_robot_serial
+[4.708s] -- Install configuration: ""
+[4.708s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/pseudo_arduino
+[4.709s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/delta_joint_pub
+[4.710s] -- Set non-toolchain portion of runtime path of "/home/flug/Documents/colcon_ws/install/delta_robot_serial/lib/delta_robot_serial/delta_joint_pub" to ""
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/package_run_dependencies/delta_robot_serial
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/parent_prefix_path/delta_robot_serial
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.sh
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/ament_prefix_path.dsv
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.sh
+[4.710s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/environment/path.dsv
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.bash
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.sh
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.zsh
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/local_setup.dsv
+[4.711s] -- Installing: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.dsv
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/ament_index/resource_index/packages/delta_robot_serial
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig.cmake
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/cmake/delta_robot_serialConfig-version.cmake
+[4.711s] -- Up-to-date: /home/flug/Documents/colcon_ws/install/delta_robot_serial/share/delta_robot_serial/package.xml
+[4.712s] Invoked command in '/home/flug/Documents/colcon_ws/build/delta_robot_serial' returned '0': CMAKE_PREFIX_PATH=/home/flug/Documents/colcon_ws/install/serial:/home/flug/Documents/colcon_ws/install/delta_robot_serial:/home/flug/Documents/colcon_ws/install/delta_robot_description:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/flug/Documents/colcon_ws/build/delta_robot_serial

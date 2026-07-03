@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from delta_robot_serial/action/PosTraj.action
+// generated code does not contain a copyright notice
+
+
+module delta_robot_serial {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct PosTraj_Goal {
+      sequence<double> x;
+
+      sequence<double> y;
+
+      sequence<double> z;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct PosTraj_Result {
+      double x;
+
+      double y;
+
+      double z;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct PosTraj_Feedback {
+      double x;
+
+      double y;
+
+      double z;
+
+      uint32 via_index;
+    };
+  };
+};
