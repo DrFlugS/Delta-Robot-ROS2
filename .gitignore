@@ -72,5 +72,7 @@ Testing/
 build/
 install/
 log/
+
+#Claude stuff
 CLAUDE.md
 DELTA_ROBOT_ARCHITECTURE.md
