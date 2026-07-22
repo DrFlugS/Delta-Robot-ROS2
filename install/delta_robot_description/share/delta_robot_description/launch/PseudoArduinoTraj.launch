@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-    <include file="$(find-pkg-share delta_robot_description)/launch/PseudoArduino.launch"/>
-    <node pkg="delta_robot_serial" exec="trajPlan_action_server" name="trajectory_plan_server"/>
-</launch>

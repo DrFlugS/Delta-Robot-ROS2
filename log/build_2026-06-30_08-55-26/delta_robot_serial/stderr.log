@@ -1,8 +1,0 @@
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:[m[K In member function ‘[01m[Kstd::vector<std::vector<double, std::allocator<double> > > TrajectoryPlanServer::[01;32m[Kgenerate_trajectory[m[K(double, double, double)[m[K’:
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:137:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
-  137 |                 double tau = [01;31m[Kt[m[K / T;  // normalized time: 0 to 1
-      |                              [01;31m[K^[m[K
-      |                              [32m[Ktm[m[K
-gmake[2]: *** [CMakeFiles/trajPlan_actionServer.dir/build.make:76: CMakeFiles/trajPlan_actionServer.dir/src/trajPlan_actionServer.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:732: CMakeFiles/trajPlan_actionServer.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

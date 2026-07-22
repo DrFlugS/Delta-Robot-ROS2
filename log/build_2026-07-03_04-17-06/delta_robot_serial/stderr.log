@@ -1,4 +1,0 @@
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:[m[K In member function ‘[01m[Kvoid TrajectoryPlanServer::[01;32m[KexecuteCB[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<delta_robot_serial::action::PosTraj> >)[m[K’:
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/trajPlan_actionServer.cpp:138:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_via[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
-  138 |             uint32_t [01;35m[Klast_via[m[K = trajectory.front().via_index;
-      |                      [01;35m[K^~~~~~~~[m[K

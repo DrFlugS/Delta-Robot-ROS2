@@ -1,7 +1,0 @@
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:78:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   78 | int main([01;35m[Kint argc[m[K, char** argv) {
-      |          [01;35m[K~~~~^~~~[m[K
-[01m[K/home/flug/Documents/colcon_ws/src/delta_robot_serial/src/delta_joint_pub.cpp:78:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   78 | int main(int argc, [01;35m[Kchar** argv[m[K) {
-      |                    [01;35m[K~~~~~~~^~~~[m[K

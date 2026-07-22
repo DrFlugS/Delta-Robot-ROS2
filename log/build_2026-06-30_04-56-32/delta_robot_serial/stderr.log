@@ -1,9 +1,0 @@
-[31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
-  rosidl_generate_interfaces() the passed file 'srv/Ikin.srv' doesn't exist
-  relative to the CMAKE_CURRENT_SOURCE_DIR
-  '/home/flug/Documents/colcon_ws/src/delta_robot_serial'
-Call Stack (most recent call first):
-  CMakeLists.txt:17 (rosidl_generate_interfaces)
-
-[0m
-gmake: *** [Makefile:308: cmake_check_build_system] Error 1

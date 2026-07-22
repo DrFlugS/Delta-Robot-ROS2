@@ -1,7 +1,0 @@
-{
-  "package_name": "delta_robot_serial",
-  "non_idl_tuples": [
-    "/home/flug/Documents/colcon_ws/src/delta_robot_serial:srv/Ikin.srv",
-    "/home/flug/Documents/colcon_ws/src/delta_robot_serial:action/PosTraj.action"
-  ]
-}

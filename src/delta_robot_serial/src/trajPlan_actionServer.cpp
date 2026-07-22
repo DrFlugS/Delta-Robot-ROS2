@@ -132,10 +132,6 @@ class TrajectoryPlanServer : public rclcpp::Node {
                 return;
             }
 
-            // via_index increments the moment we enter the next segment, i.e.
-            // just after passing a supplied via point. Track it so we can pause
-            // briefly at each one (debug aid to confirm arrival at every point).
-
             for (auto &waypoint : trajectory) {
                 if (goal_handle->is_canceling()) {
                     goal_handle->canceled(action_result_);

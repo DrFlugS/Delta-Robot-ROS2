@@ -13,7 +13,7 @@ colcon_ws/
 └── src/
     ├── delta_robot_serial/        # application logic (nodes, interfaces, kinematics)
     │   ├── src/                    # pseudo_arduino, delta_joint_pub, ikin_server, trajPlan_actionServer
-    │   ├── include/                # direct_kinematics.h, inverse_kinematics.h, bundled Eigen
+    │   ├── include/                # direct_kinematics.h, inverse_kinematics.h, spline_trajectory.h, bundled Eigen
     │   ├── srv/Ikin.srv            # IK service definition
     │   └── action/PosTraj.action   # trajectory action definition
     ├── delta_robot_description/    # URDF, meshes, RViz config, all launch files
@@ -39,7 +39,7 @@ state, which the planner also uses as feedback.
 
 ```mermaid
 flowchart TD
-    client([action client<br/>ros2 action send_goal]) -->|"PosTraj goal (x,y,z mm)"| traj
+    client([action client<br/>ros2 action send_goal]) -->|"PosTraj goal (x[],y[],z[] mm — n via points)"| traj
 
     subgraph delta_robot_serial
         traj[trajectory_plan_server<br/>action server + planner]
@@ -106,9 +106,11 @@ Built as an `rclcpp_components` component (`TrajectoryPlanServer`), also exposed
 - **Subscribes**: `/joint_states` (on a dedicated callback group serviced by an internal
   executor, so it can be pumped synchronously while an action is executing).
 - **Service client**: `/ikin_server`.
-- **Behavior** (see §6): on a goal it plans a smooth Cartesian trajectory from the current
-  state to the target, streams each waypoint through the IK service at `f_` Hz, publishes
-  feedback, then waits for the measured state to converge within tolerance before succeeding.
+- **Behavior** (see §8): the goal carries **`n` via points** as parallel `x[]/y[]/z[]` arrays.
+  The server prepends the current state, fits a **natural cubic spline** through all knots,
+  streams the densely-sampled setpoints through the IK service at `f_` Hz in order, publishes
+  feedback (current setpoint + `via_index`), then waits for the measured state to converge on
+  the **last** via point within tolerance before succeeding.
 
 ---
 
@@ -129,25 +131,31 @@ float64 phi_31
 
 ### `action/PosTraj.action`
 ```
-# Goal — target platform position, millimetres
-float64 x
-float64 y
-float64 z
+# Goal — n via points to pass through, millimetres (parallel arrays, equal length ≥ 1)
+float64[] x
+float64[] y
+float64[] z
 ---
 # Result — final measured position, millimetres
 float64 x
 float64 y
 float64 z
 ---
-# Feedback — current commanded setpoint, millimetres
+# Feedback — current commanded setpoint, millimetres, + which via point it heads toward
 float64 x
 float64 y
 float64 z
+uint32  via_index
 ```
 
+> **Note on Goal semantics:** the Goal is a **list of via points** (`x[i], y[i], z[i]`). The
+> server prepends the robot's current position and interpolates a cubic spline through them
+> (see §8); a single-element goal degrades to the old point-to-point straight-line move.
+> Empty or unequal-length arrays are rejected at `handle_goal`.
+>
 > **Note on Feedback semantics:** Feedback `x,y,z` carry the *commanded Cartesian setpoint*
-> (mm) of the waypoint currently being executed — the same space as Goal/Result. (Earlier the
-> feedback carried motor angles in degrees under these position-named fields; that was corrected.)
+> (mm) currently being executed — the same space as Goal/Result — and `via_index` is the
+> 0-based index of the supplied via point the motion is currently heading toward.
 
 ---
 
@@ -258,42 +266,55 @@ Key parameters: `T_ = 3.0 s` (nominal move duration), `f_ = 10 Hz` (waypoint sen
 low so the pseudo-Arduino's 1°/cycle slew can track).
 
 ### 8.1 Path vs. time law
-The motion is **point-to-point along a straight line** between the current position and the
-goal. It is *not* a spline through multiple via-points. The geometry is pure linear
-interpolation; a **quintic smoothstep** shapes only the *timing* along that line:
+The motion **tracks a cubic spline through the goal's `n` via points**. The robot's current
+position is prepended as knot 0 (so the arm blends in from wherever it is), giving `P = n + 1`
+knots. A **natural cubic spline** (`CubicSpline` in
+[`include/spline_trajectory.h`](src/delta_robot_serial/include/spline_trajectory.h)) fits each
+axis independently against a **cumulative chord-length** parameter, solved with a Thomas-algorithm
+tridiagonal pass. The curve passes through every via point and is C²-continuous — it does *not*
+stop at intermediate points.
+
+A **quintic smoothstep** shapes the *timing* along the whole spline (not each segment), so the
+tool starts and stops with zero velocity and acceleration:
 
 ```
-point(τ) = start + s(τ) · (goal − start)
-s(τ)     = 10τ³ − 15τ⁴ + 6τ⁵          # quintic "smootherstep"
+u = s(τ) · L                         # map normalized time τ∈[0,1] to arc-length param u∈[0,L]
+s(τ) = 10τ³ − 15τ⁴ + 6τ⁵            # quintic "smootherstep", zero 1st/2nd deriv at both ends
+point(τ) = spline.evaluate(u)        # cubic interpolation of the via points at u
 ```
 
-`s(τ)` rises 0→1 as τ (normalized time) goes 0→1, with **zero first and second derivatives at
-both ends** — i.e. the tool starts and stops with zero velocity *and* zero acceleration (bounded
-jerk). That is what makes the motion smooth for a physical actuator.
+`L` is the total chord length (`t.back()`). Degenerate cases handled by `CubicSpline`: `P == 1`
+returns the single point; coincident knots collapse without a divide-by-zero; `P == 2` reduces
+to a straight line — so a single-point goal reproduces the old point-to-point behavior.
+
+> **Caveat:** a cubic spline can *overshoot* beyond the convex hull of the via points, so an
+> intermediate sample may fall outside the workspace even when every via point is reachable —
+> IK then returns NaN and the goal aborts. Keep via points comfortably inside the workspace.
 
 ### 8.2 How many waypoints (`N`)
 ```
-distance = ‖goal − start‖
-peak_vel = (15/8) · distance / T_      # 15/8 = max of s'(τ), the quintic's peak speed
+L        = total chord length through all knots
+peak_vel = (15/8) · L / T_             # 15/8 = max of s'(τ), the quintic's peak speed
 max_step = peak_vel / f_               # furthest travel in one control tick at peak speed
-N        = max( ceil(distance / max_step), 2 )
+N        = max( ceil(L / max_step), 2 )
 ```
-`N` is a **sampling density**, chosen so no single step exceeds `max_step` even where the
-profile is fastest (mid-move). Doubling `N` produces the identical motion, sampled more finely.
-Guard: `distance < 1e-6` (already at target) ⟹ `N = 1` (avoids a 0/0).
+`N` is a **sampling density** over the whole path, chosen so no single step exceeds `max_step`
+even where the profile is fastest (mid-move). Guard: `L < 1e-6` (already at target / all knots
+coincident) ⟹ a single point (avoids a 0/0). Each sample also records the `via_index` of the
+supplied point it is heading toward (the spline segment it lies in).
 
 ### 8.3 Execution loop (`executeCB`)
 1. **Get a fresh start state.** Clear `state_received_`, then manually spin the internal
    executor until a `/joint_states` message updates `state_x/y/z` (3 s timeout → plan from last
    known state).
-2. **Plan** the `N` waypoints via `generate_trajectory()`.
-3. **Stream** each waypoint:
+2. **Plan** the `N` samples via `generate_trajectory(x[], y[], z[])`.
+3. **Stream** each sample **in order** (this is what "reach point *i*, advance to *i+1*" means):
    - abort if the goal is canceling,
    - call `/ikin_server` (5 s timeout), abort on timeout,
-   - if the IK response is valid (not NaN), publish the **commanded waypoint position** as
-     feedback and `rate.sleep()` to pace at `f_`; if invalid, abort ("Invalid IK response").
-4. **Convergence check.** After the last waypoint, repeatedly read a fresh `/joint_states`
-   (up to `max_attempts = 30`) and compute `‖goal − measured‖`. If it drops within
+   - if the IK response is valid (not NaN), publish the **commanded setpoint** plus `via_index`
+     as feedback and `rate.sleep()` to pace at `f_`; if invalid, abort ("Invalid IK response").
+4. **Convergence check.** After the last sample, repeatedly read a fresh `/joint_states`
+   (up to `max_attempts = 30`) and compute `‖last_via_point − measured‖`. If it drops within
    `tolerance = 5 mm`, `succeed()` with the measured position as the Result; otherwise `abort()`
    with a warning. The loose tolerance and retry budget accommodate the pseudo-Arduino's
    gradual 1°/cycle slew.
@@ -333,11 +354,12 @@ source install/setup.bash
 ros2 launch delta_robot_description PseudoArduinoTraj.launch
 ```
 
-Send a goal (units: **mm**):
+Send a goal — `n` via points as arrays (units: **mm**):
 ```bash
 ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
-  "{x: 0.0, y: 0.0, z: -103.0}" --feedback
+  "{x: [30,30,-30,-30], y: [0,30,30,0], z: [-110,-112,-112,-110]}" --feedback
 ```
+More ready-to-run examples are in `example_trajectories.txt` at the workspace root.
 
 Call the IK service directly:
 ```bash
