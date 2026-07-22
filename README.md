@@ -10,6 +10,7 @@ The stack includes serial communication, inverse/forward kinematics, a trajector
 <p align="center">
   <em>fully assembled delta robot.</em>
 </p>
+
 ---
 
 ## Features
@@ -73,6 +74,32 @@ uint32 via_index          # which via point it heads toward
 
 ---
 
+## Design Decisions
+
+The course stopped at single-target motion: send one Cartesian point, move there, stop. Everything below extends that into smooth multi-point trajectories.
+
+### Via points instead of a single target
+
+The action Goal was widened from three scalars to three parallel arrays (`float64[] x, y, z` in [`action/PosTraj.action`](src/delta_robot_serial/action/PosTraj.action)), so one goal describes a whole route rather than one destination. Feedback gained a `via_index` field alongside the commanded setpoint, so a client can tell which leg of the route is executing, not just where the tool is.
+
+The original behaviour is preserved rather than replaced: a single-element goal has exactly one knot beyond the start, the spline degenerates to a straight line, and the move is the point-to-point one from before. Malformed goals — empty arrays, or `x`/`y`/`z` of unequal length — are rejected up front in `handle_goal` instead of failing partway through execution.
+
+### A cubic spline through the via points, not a chain of moves
+
+Chaining point-to-point moves would make the tool stop dead at every intermediate point. Instead the via points are treated as knots of a **natural cubic spline** ([`include/spline_trajectory.h`](src/delta_robot_serial/include/spline_trajectory.h)), which is C²-continuous and passes *through* every one of them without pausing. The header is self-contained — no Eigen dependency — and solves the tridiagonal system with a Thomas-algorithm pass.
+
+The spline is parameterised by **cumulative chord length** rather than knot index. This keeps the sampling density uniform in space, so a route with one short hop and one long sweep is sampled evenly along its whole length instead of crowding samples into the short leg.
+
+One honest caveat: a cubic spline can overshoot the convex hull of its knots. An intermediate sample can therefore land outside the reachable workspace even when every via point you supplied is comfortably inside it — the IK returns NaN and the goal aborts. Keeping via points away from the workspace boundary avoids this.
+
+### Quintic smoothstep timing, applied once over the whole path
+
+Motion along the spline is timed by a quintic smoothstep, `s(τ) = 10τ³ − 15τ⁴ + 6τ⁵`, rather than a trapezoidal velocity profile. Its first *and* second derivatives vanish at both ends, so the servos see no step change in acceleration when the move starts or finishes. A trapezoidal profile is jerk-discontinuous at its corners, which geared SG90s transmit as an audible jolt.
+
+The time law is applied once across the entire path, not per segment — so the tool accelerates once at the start and decelerates once at the end, gliding through the intermediate via points instead of easing in and out of each. Its peak velocity, `15L/8T`, is also what sets the sample count: enough samples that no single control tick steps further than the servos can follow, even at the fastest point mid-move.
+
+---
+
 ## Hardware
 
 - **Microcontroller**: Arduino UNO — firmware in [`Control_Delta.ino`](Control_Delta.ino)
@@ -90,8 +117,24 @@ Geometry constants: proximal link 50 mm, distal link 93 mm, base offset 28 mm, p
 
 - Ubuntu 24.04
 - ROS 2 Jazzy
-- `socat` (for simulation mode): `sudo apt install socat`
 - `colcon` build tools
+- `socat` (for simulation mode): `sudo apt install socat`
+- ROS 2 packages: `robot_state_publisher`, `joint_state_publisher_gui`, `rviz2`, `rqt_gui`, `xacro`
+
+The ROS dependencies are declared in `delta_robot_description/package.xml`, so the simplest way to install them is from the workspace root:
+
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+Or explicitly:
+
+```bash
+sudo apt install ros-jazzy-robot-state-publisher ros-jazzy-joint-state-publisher-gui \
+                 ros-jazzy-rviz2 ros-jazzy-rqt-gui ros-jazzy-xacro
+```
+
+The `serial` library needs no callout — it is vendored in `src/` and built by `colcon` along with everything else.
 
 ### Build
 
@@ -146,32 +189,6 @@ ros2 launch delta_robot_description ArduinoTraj.launch serial_port:=/dev/ttyUSB0
 | Serial protocol angles | degrees |
 | `/joint_states` prismatic (platform x, y, z) | metres |
 | `/joint_states` revolute | radians |
-
----
-
-## Design Decisions
-
-The course exercise this project grew out of ended at a **single Cartesian target**: send one point, move there in a straight line, stop. Everything below is the extension beyond that — turning point-to-point motion into a smooth path traced through an arbitrary number of via points.
-
-### Via points instead of a single target
-
-The action Goal was widened from three scalars to three parallel arrays (`float64[] x, y, z` in [`action/PosTraj.action`](src/delta_robot_serial/action/PosTraj.action)), so one goal describes a whole route rather than one destination. Feedback gained a `via_index` field alongside the commanded setpoint, so a client can tell which leg of the route is executing, not just where the tool is.
-
-The original behaviour is preserved rather than replaced: a single-element goal has exactly one knot beyond the start, the spline degenerates to a straight line, and the move is the point-to-point one from before. Malformed goals — empty arrays, or `x`/`y`/`z` of unequal length — are rejected up front in `handle_goal` instead of failing partway through execution.
-
-### A cubic spline through the via points, not a chain of moves
-
-Chaining point-to-point moves would make the tool stop dead at every intermediate point. Instead the via points are treated as knots of a **natural cubic spline** ([`include/spline_trajectory.h`](src/delta_robot_serial/include/spline_trajectory.h)), which is C²-continuous and passes *through* every one of them without pausing. The header is self-contained — no Eigen dependency — and solves the tridiagonal system with a Thomas-algorithm pass.
-
-The spline is parameterised by **cumulative chord length** rather than knot index. This keeps the sampling density uniform in space, so a route with one short hop and one long sweep is sampled evenly along its whole length instead of crowding samples into the short leg.
-
-One honest caveat: a cubic spline can overshoot the convex hull of its knots. An intermediate sample can therefore land outside the reachable workspace even when every via point you supplied is comfortably inside it — the IK returns NaN and the goal aborts. Keeping via points away from the workspace boundary avoids this.
-
-### Quintic smoothstep timing, applied once over the whole path
-
-Motion along the spline is timed by a quintic smoothstep, `s(τ) = 10τ³ − 15τ⁴ + 6τ⁵`, rather than a trapezoidal velocity profile. Its first *and* second derivatives vanish at both ends, so the servos see no step change in acceleration when the move starts or finishes. A trapezoidal profile is jerk-discontinuous at its corners, which geared SG90s transmit as an audible jolt.
-
-The time law is applied once across the entire path, not per segment — so the tool accelerates once at the start and decelerates once at the end, gliding through the intermediate via points instead of easing in and out of each. Its peak velocity, `15L/8T`, is also what sets the sample count: enough samples that no single control tick steps further than the servos can follow, even at the fastest point mid-move.
 
 ---
 
