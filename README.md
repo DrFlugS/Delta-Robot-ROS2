@@ -6,11 +6,10 @@ The stack includes serial communication, inverse/forward kinematics, a trajector
 
 <p align="center">
   <img src="Figures/delta_robot_photo.jpg" width="45%" alt="Fully assembled delta robot"/>
-  &nbsp;&nbsp;
-<p align="center">
-  <em>fully assembled delta robot.
 </p>
-
+<p align="center">
+  <em>fully assembled delta robot.</em>
+</p>
 ---
 
 ## Features
@@ -166,7 +165,6 @@ ros2 daemon stop
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
-<!-- TODO: choose a license -->
 
 ## Acknowledgements
 
