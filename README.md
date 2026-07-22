@@ -102,7 +102,7 @@ The time law is applied once across the entire path, not per segment — so the 
 
 ## Hardware
 
-- **Microcontroller**: Arduino UNO — firmware in [`Control_Delta.ino`](Control_Delta.ino)
+- **Microcontroller**: Arduino UNO — firmware in [`firmware/Control_Delta.ino`](firmware/Control_Delta.ino)
 - **Actuators**: 3× SG90 servo motors (PWM range 544–1500 µs, constrained to 0–90°)
 - **Robot**: 3-DOF delta parallel mechanism
 - **Serial protocol**: 115200 baud, host sends `"m1, m2, m3"` (deg), Arduino echoes `J:AA,BB,CC\r\n`
