@@ -7,42 +7,52 @@ Servo servo2;
 Servo servo3;
 
 double target_angle[3];
-char inByte;
 String inputText = "";
 
 void setup() {
-  // Do not modify
   servo1.attach(5);
   servo2.attach(6);
   servo3.attach(7);
   Serial.begin(115200);
+  // Bounds readStringUntil() on a truncated frame; the default 1000 ms would
+  // stall the loop for a full second. A 16-byte command takes ~1.4 ms.
+  Serial.setTimeout(20);
   servo1.write(0);
   servo2.write(0);
   servo3.write(0);
 }
 
 void loop() {
-  // Do not modify
-  while (Serial.available() > 0) {
-    inByte = Serial.read(); // the read() function can read only one character every time
-    inputText += inByte; // append the inByte to the inputText
-    delay(10);
-    // keep reading until there is no bytes
+  // Read one complete '\n'-terminated command. The old byte-at-a-time loop cost
+  // ~160 ms per command, letting the 30 Hz host overflow the 64-byte RX buffer.
+  if (Serial.available() > 0) {
+    inputText = Serial.readStringUntil('\n');   // terminator consumed, not returned
   }
 
   if(inputText != "") {   // check the string which has been read just now
+    // A complete command has exactly two commas: a timed-out read returns a
+    // truncated frame like "90.0, 45.0, 2" that still parses to a valid angle.
+    int commas = 0;
+    for (unsigned int i = 0; i < inputText.length(); i++) {
+      if (inputText[i] == ',') commas++;
+    }
+
     string2double(inputText, target_angle, 3);   // string to double
     double phi_1=target_angle[0];
     double phi_2=target_angle[1];
     double phi_3=target_angle[2];
 
-    if (phi_1<0. || phi_2<0. || phi_3<0. || phi_1>90. || phi_2>90. || phi_3>90.){
-
+    if (commas != 2) {
+      // Truncated or garbled frame: ignore, hold the last position.
+    } else if (phi_1<0. || phi_2<0. || phi_3<0. || phi_1>90. || phi_2>90. || phi_3>90.){
+      // Outside the servos' mechanical range: ignore, hold the last position.
     } else {
-      speed_smoother(phi_1, phi_2, phi_3);
+      servo1.write((int)lround(phi_1));
+      servo2.write((int)lround(phi_2));
+      servo3.write((int)lround(phi_3));
     }
   }
-  char s[2];
+  char s[4];
   Serial.print("J:");
   sprintf(s,"%2d",servo1.read());
   Serial.print(s);
@@ -78,13 +88,4 @@ void string2double(String str, double* numbers, int size) {
     str.substring(startIndex).toCharArray(c_a, sizeof(c_a));
     numbers[index] = atof(c_a);
   }
-}
-
-void speed_smoother(double target_phi1, double target_phi2, double target_phi3) {
-  // This is a very basic joint space linear interpolator to smooth the jump in speed in point-2-point motions
-  // Feel free to write a more sophisticated smoother (e.g. polynomial/steps proportional to angle difference/steps as a function argument etc.)
-  int sampling_time = 20;
-  int steps = 50;
-  // Add your code here
-  
 }

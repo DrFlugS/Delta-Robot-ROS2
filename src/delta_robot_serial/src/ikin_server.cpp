@@ -6,6 +6,8 @@
 #include <iomanip>
 #include <cmath>
 #include <cstdlib>
+#include <chrono>
+#include <thread>
 #include <rclcpp/rclcpp.hpp>
 #include <inverse_kinematics.h>
 #include <delta_robot_serial/srv/ikin.hpp>
@@ -24,20 +26,28 @@ void setSerialPort(string serial_port, int baudrate) {
     sp.setPort(serial_port);//Set the name of the serial port to be opened
     sp.setBaudrate(baudrate);//Set the baud rate for serial communication
 }
+// Retries because pseudo_arduino creates the socat PTY symlinks asynchronously:
+// on a cold start this node can get here before $HOME/socatpty1 exists.
 bool connectToArduino() {
-    try {
-        std::cout << "Trying to open serial port: " << sp.getPort();
-        sp.open();//open the serial
-    } catch(serial::IOException& e) {
-        std::cerr << "Unable to open port."<< e.what();
-        return false;
+    const int max_attempts = 50;  // ~5 s at 100 ms per attempt
+    auto logger = rclcpp::get_logger("ikin");
+    RCLCPP_INFO_STREAM(logger, "Trying to open serial port: " << sp.getPort());
+    for (int attempt = 0; attempt < max_attempts && rclcpp::ok(); attempt++) {
+        try {
+            sp.open();//open the serial
+        } catch(serial::IOException& e) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            continue;
+        }
+        if(sp.isOpen()){
+            RCLCPP_INFO_STREAM(logger, "serial port is opened.");
+            return true;
+        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
-    if(sp.isOpen()){
-        std::cout << "serial port is opened.";
-    } else {
-        return false;
-    }
-    return true;
+    RCLCPP_ERROR_STREAM(logger, "Unable to open port " << sp.getPort()
+        << " after " << max_attempts << " attempts.");
+    return false;
 }
 void sendToSerial(double mot1, double mot2, double mot3) {
     if (isnan(mot1) || isnan(mot2) || isnan(mot3))
@@ -45,8 +55,10 @@ void sendToSerial(double mot1, double mot2, double mot3) {
         RCLCPP_WARN(rclcpp::get_logger("ikin"),
             "Rejected angles: %.2f, %.2f, %.2f", mot1, mot2, mot3);
     } else {
+        // The trailing '\n' is the only delimiter the consumers have; dropping
+        // it breaks framing in both pseudo_arduino and Control_Delta.ino.
         stringstream datastream;
-        datastream << std::fixed << std::setprecision(1) << mot1 << ", " << mot2 << ", " << mot3;
+        datastream << std::fixed << std::setprecision(1) << mot1 << ", " << mot2 << ", " << mot3 << "\n";
         string data=datastream.str();
         sp.write(data);
     }

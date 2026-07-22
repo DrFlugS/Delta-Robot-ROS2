@@ -17,7 +17,9 @@ using namespace std;
 // Mock angles of the virtual delta robot in degrees (initial value at 0°,0°,0°)
 // Enter your code here
 double target_angle[3] = {0, 0, 0};
-string temp = "";
+// Persistent across ticks: a command can arrive split, so the tail after the
+// last '\n' is an incomplete frame. Never clear this at the end of a callback.
+string rx_buffer = "";
 // Only the "arduino" side of the socat PTY pair is ours; socatpty1 (the
 // computer side) is opened by delta_joint_pub / ikin_server.
 serial::Serial sp2;//pseudo serial port on arduino
@@ -66,21 +68,33 @@ private:
     {
         size_t n = sp2.available();
         if(n!=0) {
-            RCLCPP_INFO_STREAM(this->get_logger(),"received data");
-            sp2.read(temp,n);
+            sp2.read(rx_buffer, n);//appends; bytes are already buffered, so this never blocks
         }
-        if(temp != "") {
+
+        // Drain every complete '\n'-terminated command, keeping the last:
+        // these are setpoints, so earlier ones in the same tick are stale.
+        string line;
+        size_t nl;
+        while ((nl = rx_buffer.find('\n')) != string::npos) {
+            line = rx_buffer.substr(0, nl);
+            rx_buffer.erase(0, nl + 1);
+        }
+
+        if(line != "") {
             try {
-                string2double(temp, target_angle, 3);
+                string2double(line, target_angle, 3);
             } catch (const std::exception &e) {
-                // A partial/garbled serial fragment (serial reads aren't
-                // message-framed) would otherwise throw out of stod and kill
-                // the node; drop it and wait for the next frame instead.
+                // A garbled frame would otherwise throw out of stod and kill the node.
                 RCLCPP_WARN_STREAM(this->get_logger(),
-                    "Ignoring malformed serial data '" << temp << "': " << e.what());
-                temp = "";
-                return;
+                    "Ignoring malformed serial data '" << line << "': " << e.what());
             }
+        }
+
+        // Guard against a writer that never terminates its frames.
+        if (rx_buffer.size() > 256) {
+            RCLCPP_WARN_STREAM(this->get_logger(),
+                "Discarding " << rx_buffer.size() << " buffered bytes with no line terminator");
+            rx_buffer.clear();
         }
 
         // Gradually move towards target instead of instant jump
@@ -108,7 +122,7 @@ private:
             string data=datastream.str();
             sp2.write(data);
         }
-        temp = "";
+        // rx_buffer deliberately NOT cleared here: see its declaration.
     }
 };
 
@@ -117,9 +131,8 @@ int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<PseudoArduino>();
 
-    // Launch the socat PTY pair using the node's configured baudrate. Done after
-    // node construction so the baudrate parameter is known; the retry loop below
-    // tolerates socat's asynchronous startup latency.
+    // After node construction so the baudrate parameter is known; the retry
+    // loop below tolerates socat's asynchronous startup latency.
     std::ostringstream socat_cmd;
     socat_cmd << "socat -d -d pty,b" << node->baudrate() << ",link=$HOME/socatpty1  "
               << "pty,b" << node->baudrate() << ",link=$HOME/socatpty2 &";

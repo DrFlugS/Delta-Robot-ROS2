@@ -2,7 +2,7 @@
 <!-- Real-robot base stack + trajectory action server (mirror of PseudoArduinoTraj.launch) -->
 <launch>
     <arg name="baudrate" default="115200"/>
-    <arg name="serial_port" default="/dev/ttyUSB1"/>
+    <arg name="serial_port" default="/dev/ttyUSB0"/>
 
     <include file="$(find-pkg-share delta_robot_description)/launch/Arduino.launch">
         <arg name="baudrate" value="$(var baudrate)"/>

@@ -28,7 +28,7 @@ The stack includes serial communication, inverse/forward kinematics, a trajector
 Action goal (x[], y[], z[])       n Cartesian via points (mm)
   → trajPlan_actionServer         cubic spline + quintic time law
   → /ikin_server service          x, y, z → 3 motor angles (deg)
-  → serial write                  "m1, m2, m3" (no terminator)
+  → serial write                  "m1, m2, m3\n"
   → Arduino / pseudo_arduino
   → serial read (delta_joint_pub)
   → direct_kinematics             motor angles → full joint state
@@ -105,7 +105,7 @@ The time law is applied once across the entire path, not per segment — so the 
 - **Microcontroller**: Arduino UNO — firmware in [`firmware/Control_Delta.ino`](firmware/Control_Delta.ino)
 - **Actuators**: 3× SG90 servo motors (PWM range 544–1500 µs, constrained to 0–90°)
 - **Robot**: 3-DOF delta parallel mechanism
-- **Serial protocol**: 115200 baud, host sends `"m1, m2, m3"` (deg), Arduino echoes `J:AA,BB,CC\r\n`
+- **Serial protocol**: 115200 baud, host sends `"m1, m2, m3\n"` (deg), Arduino echoes `J:AA,BB,CC\r\n`
 
 Geometry constants: proximal link 50 mm, distal link 93 mm, base offset 28 mm, platform offset 20 mm.
 
@@ -163,8 +163,22 @@ ros2 service call /ikin_server delta_robot_serial/srv/Ikin "{x: 0.0, y: 0.0, z: 
 
 ### Run (real robot)
 
+Flash [`firmware/Control_Delta.ino`](firmware/Control_Delta.ino) to the Arduino first, then **check which port it enumerated on** — the launch files assume `/dev/ttyUSB0`, but a second USB serial device (or a board using a CH340 clone chip) can push it to `ttyUSB1`, `ttyACM0`, and so on:
+
 ```bash
-ros2 launch delta_robot_description ArduinoTraj.launch serial_port:=/dev/ttyUSB0 baudrate:=115200
+ls /dev/ttyUSB* /dev/ttyACM*
+```
+
+If it is on `/dev/ttyUSB0` the defaults are correct:
+
+```bash
+ros2 launch delta_robot_description ArduinoTraj.launch
+```
+
+Otherwise pass the port explicitly:
+
+```bash
+ros2 launch delta_robot_description ArduinoTraj.launch serial_port:=/dev/ttyUSB1 baudrate:=115200
 ```
 
 ### Launch files
@@ -200,6 +214,36 @@ Because `pseudo_arduino` backgrounds a `socat` process, fully stop a launch befo
 pkill -f trajPlan_action_server; pkill -f pseudo_arduino; pkill socat
 ros2 daemon stop
 ```
+
+---
+
+## Troubleshooting
+
+### The robot appears in RViz with its links detached
+
+The arms float unattached to the base because no transforms are being published, which means `delta_joint_pub` is not publishing `/joint_states`. Check whether it is still running — if it exited during startup, the launch log will show it, since a dead node does not stop the rest of the stack from coming up:
+
+```bash
+ros2 topic hz /joint_states     # should report ~50 Hz
+ros2 node list | grep delta_joint_pub
+```
+
+In simulation this used to be caused by a startup race: `pseudo_arduino` creates the `socat` PTY pair asynchronously, and `delta_joint_pub` and `ikin_server` could reach the port before `$HOME/socatpty1` existed, then exit immediately. Both now retry the open for ~5 s, so a cold start is reliable. The failure was intermittent — a leftover `socat` from a previous run left the PTYs in place and hid it — so if you are on an older checkout, this is the symptom to look for.
+
+### `Unable to open port ... after 50 attempts`
+
+The port never appeared within the retry window. In simulation, confirm `socat` is installed (`command -v socat`) and that no stale process is holding the PTY pair — see Housekeeping above. On real hardware, check the device actually exists and that you have permission:
+
+```bash
+ls /dev/ttyUSB*                    # confirm the port, and pass it as serial_port:=
+groups | grep dialout              # if absent: sudo usermod -aG dialout $USER, then re-login
+```
+
+All real-robot launch files default to `/dev/ttyUSB0`. If your board enumerated elsewhere, pass the right one with `serial_port:=`.
+
+### The real robot reports positions but never moves
+
+Check that the flashed firmware is current. Earlier versions of [`firmware/Control_Delta.ino`](firmware/Control_Delta.ino) parsed commands and echoed servo positions but never called `servo.write()`, so the arm reported a plausible state while standing still. Re-flash and confirm the servos are on pins 5, 6 and 7 with adequate power — an UNO's 5 V rail cannot drive three SG90s under load, so use a separate supply with a common ground.
 
 ---
 
