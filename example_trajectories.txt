@@ -1,0 +1,93 @@
+========================================================================
+ Example multi-point trajectories for the delta robot
+ Action: /trajectory_plan   (delta_robot_serial/action/PosTraj)
+========================================================================
+
+The trajectory planner fits a natural cubic spline through the via points
+and samples it with a quintic smoothstep time law.  Because a C²-continuous
+spline cannot produce sharp corners, the traced path smoothly rounds every
+vertex — these trajectory names describe the via-point layout, not the
+shape the end-effector actually follows.
+
+Coordinates are in millimetres.  The robot's current position is
+prepended automatically as the first knot, so the spline always starts
+from wherever the end-effector happens to be.
+
+All trajectories below were validated on the PseudoArduino sim; each
+reaches SUCCEEDED with via_index advancing 0 → n−1.  They stay inside a
+conservative reachable envelope (x, y within ±30 mm; z from −108 to
+−122 mm).  Home position at motor-angle 0° is approximately
+(0, 0, −72.7) mm.
+
+Prerequisites
+------------------------------------------------------------------------
+  # Terminal 1 — launch the sim stack
+  ros2 launch delta_robot_description PseudoArduinoTraj.launch
+
+  # Terminal 2 — source the workspace, then send goals
+  source install/setup.bash
+
+Append --feedback to any command to watch via_index climb through the
+points.  The spline is tracked continuously (no pause at intermediate
+via points).
+
+------------------------------------------------------------------------
+1. Rectangular loop (4 via points)
+   Via points outline a rectangle; the spline rounds every corner.
+   Reached ≈ (−28.4, 0.9, −110.9)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [30,30,-30,-30], y: [0,30,30,0], z: [-110,-112,-112,-110]}" \
+  --feedback
+
+------------------------------------------------------------------------
+2. Triangular circuit (3 via points)
+   Three-point loop at constant depth; the traced shape is a smooth,
+   rounded triangle.
+   Reached ≈ (−27.6, −20.1, −112.6)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [0,28,-28], y: [30,-20,-20], z: [-112,-112,-112]}" \
+  --feedback
+
+------------------------------------------------------------------------
+3. Zigzag sweep (4 via points)
+   Lateral zigzag across the workspace with a slight depth variation.
+   Reached ≈ (29.3, 0.0, −110.1)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [-30,-10,10,30], y: [0,25,-25,0], z: [-110,-114,-114,-110]}" \
+  --feedback
+
+------------------------------------------------------------------------
+4. Vertical dip (3 via points)
+   Straight-line via points along x with a 14 mm dip at the midpoint;
+   the spline produces a smooth arc.
+   Reached ≈ (−29.7, 0.0, −108.5)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [30,0,-30], y: [0,0,0], z: [-108,-122,-108]}" \
+  --feedback
+
+------------------------------------------------------------------------
+5. Diagonal descent (3 via points)
+   Moves diagonally across x-y while descending in z.
+   Reached ≈ (−26.0, −24.6, −120.6)
+------------------------------------------------------------------------
+ros2 action send_goal /trajectory_plan delta_robot_serial/action/PosTraj \
+  "{x: [0,20,-25], y: [0,20,-25], z: [-120,-110,-90]}" \
+  --feedback
+
+========================================================================
+Notes
+========================================================================
+- x, y, z must be equal-length, non-empty arrays.  Mismatched or empty
+  goals are rejected by the action server.
+
+- A single-point goal (e.g. x:[30] y:[0] z:[-110]) is valid: the spline
+  degenerates to two knots (current position → goal), producing a
+  straight-line move.
+
+- Out-of-workspace points cause the IK solver to return NaN, which
+  aborts the goal.  Keep points inside the envelope listed above.
+========================================================================
