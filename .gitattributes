@@ -1,0 +1,8 @@
+# Exclude third-party code from GitHub Linguist's language statistics so the
+# repo reflects only the delta robot sources.
+
+# Bundled Eigen (314 headers) — upstream, unmodified
+src/delta_robot_serial/include/Eigen/** linguist-vendored
+
+# Vendored wjwwood/serial library
+src/serial/** linguist-vendored
