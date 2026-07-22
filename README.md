@@ -96,7 +96,7 @@ Geometry constants: proximal link 50 mm, distal link 93 mm, base offset 28 mm, p
 ### Build
 
 ```bash
-cd colcon_ws
+cd ROS2_Delta_Robot
 colcon build
 source install/setup.bash    # required in every terminal after building
 ```
