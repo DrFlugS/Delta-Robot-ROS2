@@ -5,7 +5,7 @@ A ROS 2 (Jazzy) workspace for controlling a **3-DOF delta robot** over a serial 
 The stack includes serial communication, inverse/forward kinematics, a trajectory planning action server with cubic spline interpolation, and a pseudo-Arduino node for hardware-free simulation.
 
 <p align="center">
-  <img src="delta_robot_photo.jpg" width="45%" alt="Fully assembled delta robot"/>
+  <img src="Figures/delta_robot_photo.jpg" width="45%" alt="Fully assembled delta robot"/>
   &nbsp;&nbsp;
 <p align="center">
   <em>fully assembled delta robot.
